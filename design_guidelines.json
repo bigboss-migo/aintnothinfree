@@ -1,0 +1,139 @@
+{
+  "build_manifest": {
+    "direction": {
+      "path": "/app/design/direction.html",
+      "app_type": "saas-tech",
+      "ambition": "A3",
+      "mode": "dark",
+      "rail": "copy",
+      "readiness": "partial",
+      "spine": "LOCAL",
+      "name": "Sovereign 96 Vault",
+      "tone": "geometric-dithered",
+      "axes": {
+        "layout": "grid-dense",
+        "hero": "interactive-panel",
+        "tone_register": "geometric-disciplined",
+        "proof": "honest-empty",
+        "motion": "interactive-reveal",
+        "colour": "abyssal-slate+pale-titanium",
+        "type_pairing": "serif-display+sans-body"
+      }
+    },
+    "tone_tokens": {
+      "colors": {
+        "--b-dark": "#0F1418",
+        "--b-surface": "#202223",
+        "--b-stone-1": "#CED4DA",
+        "--b-stone-2": "#D0D4D8"
+      },
+      "typography": {
+        "body": "Futura, \"Century Gothic\", \"Trebuchet MS\", sans-serif",
+        "display": "\"Old Standard TT\", \"Big Caslon\", \"Bodoni MT\", Georgia, serif",
+        "mono": "ui-monospace, \"SF Mono\", Menlo, Consolas, monospace",
+        "display_weight": "700"
+      },
+      "spacing_step": "tailwind default",
+      "border_radius": "0 (geometric/sharp corners)",
+      "shadows": "shadow-2xl"
+    },
+    "conversion_wiring": {
+      "action": "copy",
+      "hero_position": "Action Toolbar below the main quote panel",
+      "behavior": "When clicked, it copies the currently active quote text to the clipboard and shows a toast notification."
+    },
+    "content_slots": [
+      {
+        "slot": "vault-quote-1",
+        "text": "“Wealth consists not in great possessions, but in few wants and supreme discipline.”",
+        "source": "placeholder"
+      },
+      {
+        "slot": "vault-quote-2",
+        "text": "“Receive wealth without arrogance, and be ready to let it go without attachment.”",
+        "source": "placeholder"
+      },
+      {
+        "slot": "vault-quote-3",
+        "text": "“A wise man never loses anything if he has himself, for capital follows character.”",
+        "source": "placeholder"
+      },
+      {
+        "slot": "copy-btn-3",
+        "text": "Copy Quote",
+        "source": "brief"
+      },
+      {
+        "slot": "vault-proof",
+        "text": "Reader Feedback & Verification\n\nReader observations and archival verification records will be published here upon official distribution of the complete 96 quotes.",
+        "source": "placeholder"
+      }
+    ],
+    "fabrication_guardrails": [
+      "Do not add testimonials",
+      "Do not add statistics",
+      "Do not add ratings",
+      "Do not add review counts",
+      "Do not add awards",
+      "Do not add certifications",
+      "Do not add founding or copyright years unless present",
+      "Do not add press mentions",
+      "Do not add named clients"
+    ],
+    "locale": {
+      "language": "en-US",
+      "currency": "USD",
+      "formatting": "standard"
+    }
+  },
+  "instructions_to_main_agent": "/app/design/direction.html is the visual source of truth. These guidelines transcribe it and add real images. On any conflict, the direction file wins. Ensure that the design matches the HTML preview perfectly without making any additions like icons or layout differences. The image alternates between dead center and bottom center of screen on click.",
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": "All interactive and key informational elements MUST include a data-testid attribute. Do NOT center align the app container in CSS. Implement the exact CSS structure including variables and keyframes given in the direction file.",
+  "image_urls": {
+    "vault-seal": {
+      "url": "https://images.unsplash.com/photo-1784511022936-0ffe0e298bfc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwyfHxhbmNpZW50JTIwcm9tYW4lMjBjb2lufGVufDB8fHx8MTc5NDYzNDYzNXww&ixlib=rb-4.1.0&q=85",
+      "description": "Ancient roman coin depicting a man's profile",
+      "category": "vault-seal"
+    },
+    "vault-seal-alt": {
+      "url": "https://images.unsplash.com/photo-1718140245037-8d02a29e425e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwxfHxhbmNpZW50JTIwcm9tYW4lMjBjb2lufGVufDB8fHx8MTc5NDYzNDYzNXww&ixlib=rb-4.1.0&q=85",
+      "description": "Ancient silver coin with profile of bearded man",
+      "category": "vault-seal-alt"
+    },
+    "vault-seal-reset": {
+      "url": "https://images.unsplash.com/photo-1620745899139-041867b2a477?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwzfHxhbmNpZW50JTIwcm9tYW4lMjBjb2lufGVufDB8fHx8MTc5NDYzNDYzNXww&ixlib=rb-4.1.0&q=85",
+      "description": "Man's face carved on black surface",
+      "category": "vault-seal-reset"
+    },
+    "mechanics-preview": {
+      "url": "https://images.unsplash.com/photo-1616529927764-173a543493ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwzfHxzY2hlbWF0aWMlMjBkaWFncmFtJTIwYmxhY2slMjBhbmQlMjB3aGl0ZXxlbnwwfHx8fDE3OTQ2MzQ2NDV8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Black and white schematic diagram",
+      "category": "mechanics-preview"
+    }
+  },
+  "typography": {
+    "body": "Futura, \"Century Gothic\", \"Trebuchet MS\", sans-serif",
+    "display": "\"Old Standard TT\", \"Big Caslon\", \"Bodoni MT\", Georgia, serif",
+    "mono": "ui-monospace, \"SF Mono\", Menlo, Consolas, monospace",
+    "display_weight": "700"
+  },
+  "colors": {
+    "--b-dark": "#0F1418",
+    "--b-surface": "#202223",
+    "--b-stone-1": "#CED4DA",
+    "--b-stone-2": "#D0D4D8"
+  },
+  "motion": {
+    "animations": {
+      "d3-rise": "from { transform: translateY(115%); opacity: 0; } to { transform: translateY(0); opacity: 1; }",
+      "d3-loop": "to { transform: translateX(-50%); }"
+    },
+    "classes": [
+      "animate-fadeIn",
+      "transition-transform duration-700 ease-out",
+      "transition-colors duration-500"
+    ]
+  },
+  "accessibility": {
+    "guidelines": "Ensure data-testid on all interactive elements. Adhere to prefers-reduced-motion: reduce."
+  }
+}
