@@ -9,7 +9,7 @@
 
 /* Very slight pixelated feel: faint dot grid ground */
 .pixel-dots {
-    background-image: radial-gradient(rgba(206, 212, 218, 0.07) 1px, transparent 0);
+    background-image: radial-gradient(rgba(0, 16, 17, 0.07) 1px, transparent 0);
     background-size: 14px 14px;
 }
 

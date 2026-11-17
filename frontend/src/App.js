@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "@/App.css";
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
@@ -6,13 +6,38 @@ import { Copy, Check } from "lucide-react";
 import quotes from "@/quotes";
 
 const FONTS = [
-    { name: "Old Standard TT", stack: '"Old Standard TT", "Big Caslon", "Bodoni MT", Georgia, serif' },
-    { name: "Cormorant Garamond", stack: '"Cormorant Garamond", Georgia, serif' },
-    { name: "Playfair Display", stack: '"Playfair Display", Georgia, serif' },
-    { name: "Bodoni Moda", stack: '"Bodoni Moda", "Bodoni MT", serif' },
-    { name: "Gloock", stack: '"Gloock", Georgia, serif' },
-    { name: "Spectral", stack: '"Spectral", Georgia, serif' },
-    { name: "EB Garamond", stack: '"EB Garamond", Georgia, serif' },
+    { name: "Old Standard TT", stack: '"Old Standard TT", "Big Caslon", "Bodoni MT", Georgia, serif', weight: 700 },
+    { name: "Cormorant Garamond", stack: '"Cormorant Garamond", Georgia, serif', weight: 700 },
+    { name: "Playfair Display", stack: '"Playfair Display", Georgia, serif', weight: 700 },
+    { name: "Bodoni Moda", stack: '"Bodoni Moda", "Bodoni MT", serif', weight: 700 },
+    { name: "Gloock", stack: '"Gloock", Georgia, serif', weight: 400 },
+    { name: "Spectral", stack: '"Spectral", Georgia, serif', weight: 700 },
+    { name: "EB Garamond", stack: '"EB Garamond", Georgia, serif', weight: 700 },
+    { name: "Merriweather", stack: '"Merriweather", Georgia, serif', weight: 900 },
+    { name: "DM Serif Display", stack: '"DM Serif Display", Georgia, serif', weight: 400 },
+    { name: "Libre Baskerville", stack: '"Libre Baskerville", Georgia, serif', weight: 700 },
+    { name: "Lora", stack: '"Lora", Georgia, serif', weight: 500 },
+    { name: "Crimson Pro", stack: '"Crimson Pro", Georgia, serif', weight: 300 },
+    { name: "Cormorant", stack: '"Cormorant", Georgia, serif', weight: 600 },
+    { name: "Cinzel", stack: '"Cinzel", Georgia, serif', weight: 700 },
+    { name: "Marcellus", stack: '"Marcellus", Georgia, serif', weight: 400 },
+    { name: "Fraunces", stack: '"Fraunces", Georgia, serif', weight: 900 },
+    { name: "Zilla Slab", stack: '"Zilla Slab", Georgia, serif', weight: 600 },
+    { name: "Bitter", stack: '"Bitter", Georgia, serif', weight: 300 },
+    { name: "Vollkorn", stack: '"Vollkorn", Georgia, serif', weight: 600 },
+    { name: "IBM Plex Serif", stack: '"IBM Plex Serif", Georgia, serif', weight: 500 },
+    { name: "Source Serif 4", stack: '"Source Serif 4", Georgia, serif', weight: 800 },
+    { name: "PT Serif", stack: '"PT Serif", Georgia, serif', weight: 700 },
+    { name: "Noto Serif Display", stack: '"Noto Serif Display", Georgia, serif', weight: 300 },
+    { name: "Cardo", stack: '"Cardo", Georgia, serif', weight: 700 },
+    { name: "Cormorant SC", stack: '"Cormorant SC", Georgia, serif', weight: 700 },
+    { name: "Marcellus SC", stack: '"Marcellus SC", Georgia, serif', weight: 400 },
+    { name: "Alegreya", stack: '"Alegreya", Georgia, serif', weight: 800 },
+    { name: "Crimson Text", stack: '"Crimson Text", Georgia, serif', weight: 700 },
+    { name: "Libre Caslon Text", stack: '"Libre Caslon Text", Georgia, serif', weight: 700 },
+    { name: "Playfair Display SC", stack: '"Playfair Display SC", Georgia, serif', weight: 900 },
+    { name: "Prata", stack: '"Prata", Georgia, serif', weight: 400 },
+    { name: "Yeseva One", stack: '"Yeseva One", Georgia, serif', weight: 400 },
 ];
 
 const THEMES = [
@@ -44,7 +69,6 @@ function App() {
     const theme = THEMES[themeIndex % THEMES.length];
     const font = FONTS[fontIndex];
     const quote = quotes[quoteIndex];
-    const entryNo = useMemo(() => String(quote.id).padStart(2, "0"), [quote.id]);
 
     const advance = useCallback(() => {
         setQuoteIndex((i) => (i + 1) % quotes.length);
@@ -97,7 +121,7 @@ function App() {
     return (
         <div
             className="pixel-dots min-h-[100svh] flex flex-col transition-colors duration-500 selection:bg-[#CED4DA] selection:text-[#0F1418]"
-            style={{ backgroundColor: theme.bg, color: theme.quote }}
+            style={{ backgroundColor: "#D5D5D5", color: "#001011" }}
         >
             <Toaster position="top-center" />
 
@@ -107,16 +131,16 @@ function App() {
                     data-testid="vault-badge"
                     className="inline-block px-3 py-1 border text-[10px] font-mono-meta uppercase tracking-[0.25em]"
                     style={{
-                        backgroundColor: theme.stage,
-                        borderColor: `${theme.frame}33`,
-                        color: theme.quote,
+                        backgroundColor: "transparent",
+                        borderColor: "#00101133",
+                        color: "#001011",
                     }}
                 >
-                    Vault Edition &bull; 96 Money &amp; Stoic Formulations
+                    Work Free &bull; 96 or 17 yk where we at
                 </div>
                 <h1
                     className="mt-3 text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight uppercase leading-none"
-                    style={{ color: theme.quote }}
+                    style={{ color: "#001011" }}
                 >
                     <span className="ln">
                         <span>Calculated Will.</span>
@@ -125,13 +149,6 @@ function App() {
                         <span>Unbroken Capital.</span>
                     </span>
                 </h1>
-                <p
-                    className="mt-4 text-sm max-w-lg mx-auto leading-relaxed"
-                    style={{ color: `${theme.meta}CC` }}
-                >
-                    Click the central medallion to advance through 96 stoic money quotes. The emblem
-                    alternates between dead center and bottom center.
-                </p>
             </header>
 
             {/* INTERACTIVE VAULT CONSOLE */}
@@ -150,17 +167,14 @@ function App() {
                             <blockquote
                                 data-testid="quote-text"
                                 className="font-quote-display text-2xl sm:text-4xl leading-tight max-w-2xl mx-auto"
-                                style={{ color: theme.quote, fontFamily: font.stack }}
+                                style={{
+                                    color: theme.quote,
+                                    fontFamily: font.stack,
+                                    fontWeight: font.weight,
+                                }}
                             >
                                 &ldquo;{quote.text}&rdquo;
                             </blockquote>
-                            <figcaption
-                                data-testid="quote-meta"
-                                className="mt-3 text-xs font-mono-meta uppercase tracking-[0.2em]"
-                                style={{ color: `${theme.meta}99` }}
-                            >
-                                Vault Entry #{entryNo} of 96 &bull; {quote.attribution}
-                            </figcaption>
                         </figure>
                     </div>
 
@@ -186,14 +200,14 @@ function App() {
                                 width={176}
                                 height={176}
                                 draggable={false}
-                                className="pixelated w-36 h-36 sm:w-44 sm:h-44 select-none"
+                                className="w-36 h-36 sm:w-44 sm:h-44 select-none object-cover"
                             />
                         </button>
                         <div
                             className="text-[10px] font-mono-meta mt-2 uppercase tracking-widest"
                             style={{ color: `${theme.meta}80` }}
                         >
-                            [ Alternate Center vs Bottom State &middot; Space / &rarr; to advance ]
+                            [ Click the Image Or ]
                         </div>
                     </div>
 
@@ -240,7 +254,7 @@ function App() {
                                 style={{ color: theme.quote }}
                                 data-testid="font-label"
                             >
-                                {font.name} 700
+                                {font.name} {font.weight}
                             </span>
                         </div>
                     </div>

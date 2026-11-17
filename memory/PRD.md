@@ -34,15 +34,13 @@ Follow-up (2026-11-14): "remove top nav and all extra sections — only the gene
 ## Implemented later
 - 2026-11-14: Font randomization per click (FONTS array in src/App.js, Google Fonts loaded in index.html)
 - 2026-11-14: Keyboard advance (Space / ArrowRight advances quote; hint label under medallion); verified via keyboard.press test
+- 2026-11-17: Page background changed to #D5D5D5 with #001011 text outside the generator (hero, badge, subtitle; dot-grid tinted dark). Badge text changed to "Work Free • 96 or 17 yk where we at". Generator panel still alternates dark #0F1418/#202223 themes.
+- 2026-11-17: Placeholder PNG replaced with user's image (MM.png — stylized figure with Gengars, champagne, money). Resized to 512px, saved as /public/placeholder.png (old placeholder kept at /public/placeholder-backup.png). Pixelated rendering removed so art shows sharp.
+- 2026-11-17: Removed "Vault Entry #01 of 96" meta line and hero subtitle; hint under medallion reads "[ Click the Image Or ]".
+- 2026-11-17: Font pool expanded from 7 to 30 Google serif faces (FONTS array in App.js with per-font weights 300-900).
+- 2026-11-17: Removed "Vault Entry #NN of 96 • Placeholder · Part · ..." meta line under quotes; hint label under medallion changed to "[ Click the Image Or Space / → ]".
 
 ## Backlog / pending user input
 - P0: User to supply the real 96 quotes (currently placeholders in src/quotes.js)
-- P0: User to supply their real PNG (currently /public/placeholder.png)
-- P1 (spark): share/X post button alongside copy
-- P2: per-quote deep link (?q=NN) for shareable quote URLs
-
-## Backlog / pending user input
-- P0: User to supply the real 96 quotes (currently placeholders in src/quotes.js)
-- P0: User to supply their real PNG (currently /public/placeholder.png)
 - P1 (spark): share/X post button alongside copy
 - P2: per-quote deep link (?q=NN) for shareable quote URLs
